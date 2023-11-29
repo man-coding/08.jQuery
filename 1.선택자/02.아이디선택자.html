@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+         // $(document).ready() 이랑 같은 의미
+         $(
+            function(){
+                $("#title")   //title id를 갖고 있는 것만 꾸민다
+                .css("background-color", "yellow")
+                .css("border", "2px solid red");
+            }
+         );
+
+    </script>
+</head>
+<body>
+
+    <h1>제목1</h1>
+    <h1 id="title">제목2</h1>
+    <h1>제목3</h1>
+    
+</body>
+</html>
