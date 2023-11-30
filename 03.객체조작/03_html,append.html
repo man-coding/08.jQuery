@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function(){
+            //div 밑에 모든 자식을 지우고, 링크 넣기
+            $("div").html("<a href=\"#\">링크</a>");
+
+            //목록 안에 새로운 아이템 추가
+            let li = '<li>새로운아이템</li>';  //html처럼 그대로 추가
+            $("ul").append(li);
+        });
+    </script>
+</head>
+<body>
+
+    <div>
+        <span>단어1</span>
+        <span>단어2</span>
+    </div>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+    </ul>
+
+    
+    
+</body>
+</html>

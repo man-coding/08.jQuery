@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".btn1").hover(function(){
+                $(this).next().css({"background-color": "aqua"});
+            });
+
+            $(".btn2").on("mouseover",function(){   //mouseover = hover 같은 것
+                $(this).next().css({"background-color": "pink"});
+            });
+           
+        });
+    </script>
+</head>
+<body>
+
+     <p>
+        <button class = "btn1">버튼1</button>
+        <span class = "span1">텍스트1</span>
+     </p>
+     <p>
+        <button class="btn2">버튼2</button>
+        <span class="span2">텍스트2</span>
+     </p>
+    
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        function addMember(){
+            
+            //1. input에서 값을 꺼내온다. 
+            const name = $("#user_name").val();
+            const age = $("#user_age").val();
+           
+            //2. 테이블에 새로운 회원 추가
+            // tr태그 만들기
+            const tr = `<tr><td id="td1">${name}</td><td id="td2">${age}</td></tr>`;  //html처럼 그대로 추가
+            
+            // 테이블에 태그 추가
+            $("table").append(tr);
+            };
+    </script>
+
+    <style>
+        td,th {
+            border: 1px solid black;
+        }
+
+        th,td {
+            padding: 10px 20px;
+        }
+
+        table,th,td{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>회원 등록하기</h2>
+    <div>
+        <input type="text" name="user_name" id="user_name" placeholder="이름 입력">
+        <input type="text" name="user_age" id="user_age" placeholder="나이 입력">
+        <!-- 클릭하면 수행할 함수 넣어주면 됨. -->
+        <button onclick="addMember()">새로운 회원 등록</button>
+        <!-- <button type="reset">초기화</button>  리셋은 폼 안에서만 가능  -->
+
+    </div>
+    <br>
+    <div>
+        <table>
+            <caption>회원목록</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+            <tr>
+                <td>둘리</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>또치</td>
+                <td>18</td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

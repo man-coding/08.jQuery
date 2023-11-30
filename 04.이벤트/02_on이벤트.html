@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+
+    <script>
+        $(function(){
+            $("ul a").on("click", function(){
+
+                $("ul a").css({"background-color": "white"}) // 색이 옮겨가려면 화이트로 초기화시켜야 함.
+                $(this).css({"background-color": "aqua"})
+            });
+        }); // 중요함. 자주 사용함. 클릭한 것에만 css를 주는 것.
+
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+
+    
+    
+</body>
+</html>
