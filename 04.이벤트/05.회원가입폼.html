@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script defer src="./register.js"></script>
+
+    <link rel="stylesheet" href="./register.css">
+
+</head>
+<body>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+
+            <ul>
+                <li>
+                    <label for="userid">아이디</label>
+                    <input id="userid" name="userid" type="text" required>  <!--아이디는 필수값으로 지정-->
+                </li>
+                <li>
+                    <label for="pwd1">비밀번호</label>
+                    <input id="pwd1" name="pwd1" type="password" required>   <!--비번도 필수값-->
+                </li>
+                <li>
+                    <label for="pwd2">비밀번호 확인</label>
+                    <input id="pwd2" name="pwd2" type="password" required>
+
+                    <span class="msg">두 개의 비밀번호가 일치하지 않습니다.</span>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>개인 정보</legend>
+
+            <ul>
+                <li>
+                    <label for="fullname">이름</label>
+                    <input id="fullname" name="fullname" type="text" maxlength="5" placeholder="5자 미만으로 입력">
+                </li>
+                <li>
+                    <label for="level">회원 등급</label>
+                    <input id="level" name="level" type="text" readonly value="준회원">
+                </li>
+            </ul>
+            
+       </fieldset>
+
+       <fieldset>
+
+            <!-- <button type="s/ubmit">제출</button> --> <!--비밀번호가 일치하는지 알 수 없음-->
+            <button type="button" onclick="func();">제출</button>
+        </fieldset>
+
+
+    </form>
+    
+</body>
+</html>
