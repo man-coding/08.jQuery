@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        function func() {
+            const promise = new Promise(
+                (resolve, reject) => {   //변수명, a,b로 해도 상관없음.
+
+                    setTimeout(() => {
+                        //응답으로 중복여부 받음
+                        reject(new Error("no network"));
+                    }, 3000);
+
+                }
+            );
+                console.log(1);  //중간엔 어떤 작업을 수행해도 이상없음
+
+            promise
+            .then((result) => {
+                if(result){
+                    $("p").show();
+                    $("#id").focus();
+                } else{
+                    $("p").hide();
+                    alert('사용가능한 아이디입니다!')
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>회원가입</h2>
+
+    <label for="id">아이디</label>
+    <input type="text" id="id" name="id">
+    <button onclick="func();">중복체크</button>
+
+    <label for="password">패스워드</label>
+    <input type="type" id="password" name="password">
+
+    <p style="color: red; display: none;">아이디가 중복되었습니다!</p>
+
+
+
+</body>
+
+</html>

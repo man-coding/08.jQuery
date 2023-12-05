@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script> //온클릭 방법
+     
+        function sum(){
+
+            const num1 = $("#num1").val();
+            const num2 = $("#num2").val();
+
+            const result1 = Number(num1) + Number(num2);
+            
+            $("span").append(result1);
+            
+        };
+    
+        function subt(){
+
+            const num1 = $("#num1").val();
+            const num2 = $("#num2").val();
+
+            const result2 = num1 - num2;
+            $("span").append(result2);
+        };
+        function multiple(){
+
+            const num1 = $("#num1").val();
+            const num2 = $("#num2").val();
+
+            const result3 = num1 * num2;
+            $("span").append(result3);
+        };
+        function divide(){
+
+            const num1 = $("#num1").val();
+            const num2 = $("#num2").val();
+
+            const result4 = num1 / num2;
+            $("span").append(result4);
+        };
+
+        function reset(){
+            span.remove();
+        }
+    </script>
+
+
+
+
+
+    <style>
+        ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        button {
+            width: 40px;
+            margin-right: 16px;
+
+        }
+
+        button:focus{
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .reset{
+            
+            width: 223px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class=main>
+        <h3>두수를 입력하고, 계산기능을 선택하세요!</h3>
+
+        <div>
+            <ul>
+                <li>
+                    <label for="num1">숫자1</label>
+                    <input type="number" name="num1" id="num1">
+                </li>
+                <li>
+                    <label for="num2">숫자2</label>
+                    <input type="number" name="num2" id="num2">
+                </li>
+
+                <li class = "solution">
+                    <button type="button" onclick="sum()">+</button>
+                    <button type="button" onclick="subt()">-</button>
+                    <button type="button" onclick="multiple()">*</button>
+                    <button type="button" onclick="divide()">/</button>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <hr>
+
+        <span>결과 = </span>
+        <span class="">?</span>
+        <br>
+        <button type="reset" class="reset" onclick="reset()">다시계산</button></p>
+    </div>
+
+
+</body>
+
+</html>
